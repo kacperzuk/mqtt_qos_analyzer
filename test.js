@@ -12,5 +12,5 @@ function spam() {
 
 client.on("connect", function() {
     spam()
-    setInterval(spam, 100);
+    setInterval(spam, 5);
 });
