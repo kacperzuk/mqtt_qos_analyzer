@@ -82,7 +82,7 @@ function dump(reason, add) {
     })), (err, out) => {
         console.log(err);
         fs.writeFileSync(options.file + "_intervals.csv", out);
-        console.log("Try running ");
+        console.log("Try running octave-cli --eval=\"hist(csvread('"+options.file+"_intervals.csv')(:,2), 25)\" --persist");
 
         if(reason) {
             console.log("Quiting because:", reason);
